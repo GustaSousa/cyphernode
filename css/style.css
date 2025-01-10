@@ -1,0 +1,157 @@
+/* Paleta de Cores */
+:root {
+    --amarelo: #FACF39;
+    --preto: #111111;
+    --bege: #FFFBF3;
+    --amarelo-claro: #F9C307;
+    --amarelo-escuro: #FBDB6B;
+    --cinza-escuro: #2A2A2A;
+}
+
+/* Reset de CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--preto);
+    color: var(--bege);
+}
+
+/* Corpo */
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Conteúdo */
+#content {
+    padding: 20px;
+    background-color: var(--cinza-escuro);
+}
+
+h2 {
+    color: var(--amarelo-claro);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cinza-escuro);
+    color: var(--bege);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Links */
+a {
+    color: var(--amarelo-claro);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #111111;
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--amarelo-claro);
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--amarelo-claro);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--cinza-escuro);
+    color: #FFFBF3;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Posts Section */
+.posts {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--cinza-escuro);
+    background-color: var(--bege);
+    border-radius: 8px;
+}
+
+.post h3 a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    color: var(--amarelo-escuro);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--amarelo);
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    color: var(--amarelo-escuro);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--preto);
+    color: var(--bege);
+    font-size: 0.8rem;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda como funciona a descriptografia de senhas HASH e os riscos associados.">
+    <title>Descriptografia de Senhas HASH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFBF3;
+            color: #111111;
+        }
+        header {
+            background-color: #FACF39;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #111111;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FACF39;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #F9F9F9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        a {
+            color: #F9C307;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2A2A2A;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Descriptografia de Senhas HASH</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introdução</h2>
+            <p>A criptografia HASH é uma técnica amplamente utilizada para proteger senhas, transformando-as em cadeias únicas e irreversíveis de caracteres. Apesar de ser uma medida de segurança eficaz, sua proteção pode ser comprometida por meio de ataques avançados, como força bruta e dicionários de senhas.</p>
+        </section>
+        <section>
+            <h2>O Que É um HASH?</h2>
+            <p>Um HASH é uma função matemática que transforma qualquer entrada em uma sequência fixa de caracteres. Por exemplo:</p>
+            <p><code>Senha: "minhasenha123"</code> → <code>HASH SHA-256: "ef92b778ba..."</code></p>
+            <ul>
+                <li><strong>Irreversibilidade:</strong> O HASH não pode ser "desfeito" para revelar a entrada original.</li>
+                <li><strong>Determinismo:</strong> A mesma entrada sempre produz o mesmo HASH.</li>
+                <li><strong>Sensibilidade:</strong> Pequenas mudanças na entrada geram HASHes completamente diferentes.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Como as Senhas HASH São Quebradas?</h2>
+            <ul>
+                <li><strong>Força Bruta:</strong> Um atacante testa todas as combinações possíveis de caracteres até encontrar um HASH correspondente.</li>
+                <li><strong>Rainbow Tables:</strong> Tabelas pré-computadas com HASHes de combinações comuns, permitindo a busca rápida de correspondências.</li>
+                <li><strong>Listas de Senhas Vazadas:</strong> Ataques utilizam senhas de bancos de dados comprometidos, comparando os HASHes com os armazenados.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Como Proteger Senhas HASH?</h2>
+            <ul>
+                <li><strong>Salting:</strong> Adicione valores aleatórios às senhas antes de calcular o HASH, tornando ataques com tabelas de arco-íris ineficazes.</li>
+                <li><strong>Hashing Iterativo:</strong> Execute o processo de HASH várias vezes para dificultar ataques de força bruta.</li>
+                <li><strong>Algoritmos Robustos:</strong> Utilize algoritmos como <code>bcrypt</code>, <code>argon2</code> ou <code>PBKDF2</code>, projetados para segurança de senhas.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ferramentas Usadas por Atacantes</h2>
+            <ul>
+                <li><strong>Hashcat:</strong> Uma ferramenta poderosa para quebrar HASHes usando GPU.</li>
+                <li><strong>John the Ripper:</strong> Uma alternativa popular para quebrar HASHes e auditar senhas.</li>
+                <li><strong>CrackStation:</strong> Um serviço online para buscar HASHes em grandes bancos de dados.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Conclusão</h2>
+            <p>A segurança de senhas HASH depende tanto da robustez do algoritmo quanto das práticas usadas ao implementá-lo. Entender como HASHes funcionam e como podem ser comprometidos é essencial para proteger sistemas contra ataques.</p>
+            <p><strong>Não subestime a importância de proteger senhas com boas práticas!</strong></p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 CypherNode - Segurança Digital Simplificada
+    </footer>
+</body>
+</html>
