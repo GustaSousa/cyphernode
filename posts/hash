@@ -1,0 +1,50 @@
+Entendendo a Descriptografia de HASHes: Mitos e Realidades
+
+Introdução
+
+Senhas HASHeadas são um dos métodos mais comuns de proteger credenciais em sistemas modernos. No entanto, há uma grande confusão sobre o que realmente significa “descriptografar” um HASH. Este artigo explica como os algoritmos de HASH funcionam, por que eles são irreversíveis e como ainda assim podem ser explorados por atacantes.
+
+O Que É um HASH e Como Ele Funciona?
+
+Um HASH é o resultado de uma função matemática que transforma dados de tamanho variável em uma saída de tamanho fixo. Por exemplo:
+	•	Entrada: “minhasenha123”
+	•	Saída (SHA-256): “ef92b778bafee8f22…”
+
+Características principais de um HASH:
+	•	Irreversibilidade: Não é possível “desfazer” o HASH para revelar a entrada original.
+	•	Determinismo: A mesma entrada sempre gera o mesmo HASH.
+	•	Sensibilidade: Uma pequena alteração na entrada muda completamente o HASH.
+
+Desmistificando a Descriptografia de HASHes
+
+Apesar de “descriptografar um HASH” ser um termo popular, ele não é tecnicamente correto. HASHes não são criptografias reversíveis, mas ainda podem ser explorados com técnicas como:
+	•	Ataques de Força Bruta: Testando todas as combinações possíveis até encontrar o HASH correspondente.
+	•	Tabelas de Arco-Íris (Rainbow Tables): Bancos de dados pré-computados com entradas e seus respectivos HASHes.
+	•	Comparação com Listas Vazadas: HASHes podem ser verificados contra bases de dados comprometidas.
+
+Por Que HASHes Não São Suficientes Sozinhos?
+
+HASHes simples são vulneráveis a ataques quando:
+	1.	Senhas fracas são usadas.
+	2.	Não há um “salt” (valor aleatório adicionado ao HASH).
+	3.	Algoritmos antigos e inseguros são utilizados, como MD5 ou SHA-1.
+
+Como Proteger Senhas HASHeadas?
+
+	1.	Salting: Adicionar valores aleatórios à senha antes de aplicar o HASH.
+Exemplo: senha123 + salt = ef9c873bd...
+	2.	Iteração de HASH: Repetir o processo de HASH várias vezes para dificultar ataques.
+	3.	Algoritmos Robustos: Utilizar algoritmos modernos como bcrypt, argon2 ou PBKDF2, que são mais seguros contra ataques modernos.
+	4.	Políticas de Senhas Fortes: Garantir que os usuários escolham senhas longas e complexas.
+
+Ferramentas Populares Para Atacar HASHes
+
+	•	Hashcat: Um dos softwares mais rápidos para quebra de HASHes usando GPUs.
+	•	John the Ripper: Ferramenta popular para auditar e quebrar senhas.
+	•	CrackStation: Serviço online que compara HASHes com grandes bancos de dados vazados.
+
+Conclusão
+
+HASHes são uma ferramenta poderosa para proteger senhas, mas sua segurança depende de boas práticas e da implementação correta. Compreender como HASHes podem ser atacados ajuda a evitar falhas e a melhorar a segurança em sistemas.
+
+A segurança começa com a conscientização. Proteja seus dados e use os melhores métodos disponíveis!
